@@ -1,0 +1,34 @@
+<p>dashboard works!</p>
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      
+          <!-- Icon -->
+          <div class="fadeIn first">
+            <img src="assets/logo.png" id="icon" alt="User Icon" />
+          </div>
+
+<form [formGroup]="cotizacionForm" ngSubmit)="onCotizacion(cotizacionForm.value)">
+    <input type="text" id="modelId"    formControlName="modelId" class="form-control form-control-lg" placeholder="modelId">
+    <input type="text" id="brandId"    formControlName="brandId" class="form-control form-control-lg" placeholder="brandId">
+    <input type="text" id="year"       formControlName="year" class="form-control form-control-lg" placeholder="year">
+    <input type="text" id="carOwner"   formControlName="carOwner" class="form-control form-control-lg" placeholder="carOwner">
+    <input type="text" id="nationalId" formControlName="nationalId" class="form-control form-control-lg" placeholder="nationalId">
+    <input type="text" id="firstName"  formControlName="firstName" class="form-control form-control-lg" placeholder="firstName">
+    <input type="text" id="lastName"   formControlName="lastName" class="form-control form-control-lg" placeholder="lastName">
+    <input type="text" id="birthdate"  formControlName="birthdate" class="form-control form-control-lg" placeholder="birthdate">
+    <input type="text" id="countyId"   formControlName="countyId" class="form-control form-control-lg" placeholder="countyId">
+    <input type="text" id="phone"      formControlName="phone" class="form-control form-control-lg" placeholder="phone">
+    <input type="text" id="email"      formControlName="email" class="form-control form-control-lg" placeholder="email">
+    <input type="text" id="contactType"formControlName="contactType" class="form-control form-control-lg" placeholder="contactType"> 
+    <input type="text" id="carUseType" formControlName="carUseType" class="form-control form-control-lg" placeholder="carUseType">
+    <input type="submit" class="fadeIn fourth" value="">
+  </form>
+  
+  <div class="class alert-danger" *ngIf="errorCotizacionId">
+    <p>{{errorMensaje}}    </p>
+  </div>
+
+  </div>
+    </div>

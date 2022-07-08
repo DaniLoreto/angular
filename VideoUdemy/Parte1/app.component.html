@@ -1,0 +1,37 @@
+<div class="container mt-4">
+<div class="row">
+  <h3>
+    el nombre es {{nombre}}  
+    <!--interpolacion asi se traen elementor de el ".ts"-->
+    <br>
+    la suma de 10 + 15 = {{getSuma(10,15)}} 
+    <!--asi se trae un metodo-->
+  </h3>
+  <br>
+  <input type="text" class="form control" [placeholder]='textPlaceholder' [disabled]="deshabilitado"> <!--[placeholder]='textPlaceholder': asi se hace que una propiedad se pueda modificar desde el .ts a travez de una variable, nombre de la variable es el valor que se le asignara a la propiedad.
+  [disabled]="deshabilitado" tiene un metodo en el cual se habilitara despues de unos segundos -->
+  <br>
+  <!--<img [src]="bugsBunny" alt="" width="100px" height="800px"> 
+  muestra una imagen -->
+</div>
+</div>
+<br>
+<br>
+<div class="container">
+  <h3>
+    {{texto}}
+  </h3>
+<button class="btn btn-primary" (click)="cambiarTexto()">tokame</button>
+<!--boton, Click trae un metodo del .ts para cambiar el texto al presionarlo -->
+<br>
+<br>
+</div>
+<div class="container">
+  <div>
+    <input type="text" class="form-control" [placeholder]="textPlaceholder"  [(ngModel)]="variableVacia">
+<!--para utilizar el ngmodel se require importar la libreria a :
+app.module.ts-->
+  </div>
+  <br>
+  {{variableVacia}}
+</div>

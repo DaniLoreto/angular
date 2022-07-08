@@ -1,0 +1,35 @@
+<div class="container mt-4">
+<div class="row">
+  <h3>{{text}}</h3>
+</div>
+<br>
+<div>
+<table class="table" *ngIf="listadoTareas.length>0">
+    <thead>
+      <th>index</th>
+      <th>Donde</th>
+      <th>Tarea</th>
+      <th>Estado</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let TareasCasa of listadoTareas ; let i = index" [ngSwitch]="TareasCasa.estado ">
+        <td>{{i + 1}}</td>
+        <td>{{TareasCasa.donde}}</td>
+        <td>{{TareasCasa.tarea}}</td>
+        <td>
+          <span *ngSwitchCase="'porCumplir'" class="bagde bg-danger">
+            {{TareasCasa.estado}}
+          </span>
+          
+          <span *ngSwitchCase="'Cumplido'" class="bagde bg-secondary">
+            {{TareasCasa.estado}}
+          </span>
+          
+        </td>
+  
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <h3 *ngIf="listadoTareas.length === 0">No quedan tareas</h3>
+</div>
